@@ -1,0 +1,20 @@
+[
+  {
+    "code": "M001",
+    "name": "Angga",
+    "penalty": false,
+    "password": "123456"
+  },
+  {
+    "code": "M002",
+    "name": "Ferry",
+    "penalty": false,
+    "password": "123456"
+  },
+  {
+    "code": "M003",
+    "name": "Putri",
+    "penalty": false,
+    "password": "123456"
+  }
+]
