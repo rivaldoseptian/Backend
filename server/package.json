@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "test": "jest --runInBand --forceExit",
+    "rest-db": "sequelize --env test db:drop && sequelize --env test db:create && sequelize --env test db:migrate"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +18,11 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "pg": "^8.10.0",
-    "sequelize": "^6.31.0"
+    "sequelize": "^6.31.0",
+    "supertest": "^6.3.3",
+    "swagger-ui-express": "^4.6.2"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }

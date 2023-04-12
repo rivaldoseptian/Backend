@@ -19,6 +19,18 @@ module.exports = (error, request, response, next) => {
       status = 403;
       message = "You are not authorized";
       break;
+    case "Can only Borrow 2 Books":
+      status = 403;
+      message = "Can only Borrow 2 Books";
+      break;
+    case "can't borrow books":
+      status = 403;
+      message = "Can't Borrow Books";
+      break;
+    case "Not found":
+      status = 404;
+      message = "Data Not found";
+      break;
     default:
       break;
   }
