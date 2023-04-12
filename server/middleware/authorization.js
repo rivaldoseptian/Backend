@@ -13,4 +13,15 @@ async function authorization(req, res, next) {
   }
 }
 
-module.exports = authorization;
+async function authorizationBorrow(req, res, next) {
+  try {
+    const id = req.user.id;
+    const borrow = await Borrow.findAll({ where: { memberId: id } });
+    if (borrow.length >= 2) throw { name: "Can only Borrow 2 Books" };
+    next();
+  } catch (error) {
+    next(error);
+  }
+}
+
+module.exports = { authorization, authorizationBorrow };
